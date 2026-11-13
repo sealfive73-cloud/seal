@@ -1,0 +1,680 @@
+<!doctype html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>오사카 가족여행 | 2026.12.28–2027.01.01</title>
+<style>
+:root{
+  --cream:#fff8e9;
+  --paper:#fffdf7;
+  --green:#174b36;
+  --dark:#0e3021;
+  --orange:#e47732;
+  --soft:#fff0df;
+  --ink:#243129;
+  --muted:#637068;
+  --line:#e5ddca;
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{
+  margin:0;
+  color:var(--ink);
+  background:var(--cream);
+  font:17px/1.65 Arial,"Noto Sans KR",sans-serif;
+  overflow-x:hidden;
+}
+a{color:var(--green)}
+a:focus-visible,button:focus-visible,input:focus-visible{
+  outline:4px solid #f2b36c;
+  outline-offset:3px;
+}
+.wrap{width:min(1100px,calc(100% - 28px));margin:auto}
+header{
+  padding:20px 0 55px;
+  color:#fff;
+  background:var(--green);
+}
+.top{
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+  gap:16px;
+  margin-bottom:35px;
+}
+.brand{font-weight:800;letter-spacing:.03em}
+nav{display:flex;flex-wrap:wrap;gap:7px}
+nav a{
+  padding:6px 9px;
+  color:#fff;
+  text-decoration:none;
+  border-radius:7px;
+}
+nav a:hover{background:#ffffff20}
+.hero{
+  display:grid;
+  grid-template-columns:1fr 1fr;
+  gap:30px;
+  align-items:center;
+}
+h1,h2,h3{line-height:1.25}
+h1{
+  margin:0 0 15px;
+  font-size:clamp(2.3rem,6vw,4.7rem);
+  letter-spacing:-.07em;
+}
+h2{
+  margin:0;
+  color:var(--green);
+  font-size:clamp(1.7rem,4vw,2.4rem);
+}
+h3{
+  margin:0 0 9px;
+  color:var(--green);
+  font-size:1.3rem;
+}
+.hero p{color:#e8f0e8;font-size:1.12rem}
+.art{display:grid;place-items:center}
+.art svg{display:block;width:min(100%,450px);height:auto}
+main{padding:40px 0 75px}
+.notice{
+  margin-bottom:28px;
+  padding:17px 19px;
+  background:var(--soft);
+  border-left:6px solid var(--orange);
+  border-radius:12px;
+}
+.notice strong{color:#843c10}
+.section{margin-top:48px;scroll-margin-top:20px}
+.heading{
+  display:flex;
+  justify-content:space-between;
+  align-items:end;
+  gap:15px;
+  margin-bottom:17px;
+}
+.muted{color:var(--muted)}
+.grid2,.grid3{
+  display:grid;
+  gap:15px;
+}
+.grid2{grid-template-columns:repeat(2,minmax(0,1fr))}
+.grid3{grid-template-columns:repeat(3,minmax(0,1fr))}
+.card{
+  min-width:0;
+  padding:20px;
+  background:var(--paper);
+  border:1px solid var(--line);
+  border-radius:18px;
+  box-shadow:0 9px 25px #443b2414;
+}
+.summary-card strong{
+  display:block;
+  color:var(--orange);
+  font-size:.9rem;
+}
+.day{
+  display:grid;
+  grid-template-columns:135px 1fr;
+  gap:20px;
+  padding:23px 0;
+  border-top:1px solid var(--line);
+}
+.daylabel{
+  color:var(--orange);
+  font-size:1.1rem;
+  font-weight:800;
+}
+li{margin:6px 0}
+.tag{
+  display:inline-block;
+  margin:3px;
+  padding:2px 10px;
+  color:var(--green);
+  background:#e9f2e8;
+  border-radius:20px;
+  font-size:.88rem;
+  font-weight:700;
+}
+.buttons,.toolbar{
+  display:flex;
+  flex-wrap:wrap;
+  gap:9px;
+  margin-top:14px;
+}
+.btn,button{
+  display:inline-flex;
+  align-items:center;
+  justify-content:center;
+  min-height:45px;
+  padding:10px 14px;
+  border:0;
+  border-radius:9px;
+  font:inherit;
+  font-weight:700;
+  text-align:center;
+  text-decoration:none;
+  cursor:pointer;
+}
+.orange{color:#fff;background:var(--orange)}
+.green{color:#fff;background:var(--green)}
+.white{color:var(--green);background:#fff;border:1px solid var(--green)}
+.source,.map-note{
+  color:var(--muted);
+  font-size:.94rem;
+}
+.source{
+  margin-top:14px;
+  padding-top:12px;
+  border-top:1px dashed var(--line);
+}
+.check-summary{
+  margin-bottom:17px;
+  padding:20px;
+  color:#fff;
+  background:var(--green);
+  border-radius:18px;
+}
+.track{
+  height:12px;
+  margin:10px 0;
+  overflow:hidden;
+  background:#ffffff40;
+  border-radius:20px;
+}
+.bar{width:0;height:100%;background:#ffc56e}
+.checklist{
+  display:grid;
+  grid-template-columns:repeat(2,minmax(0,1fr));
+  gap:10px;
+}
+.checkbox{
+  display:flex;
+  align-items:flex-start;
+  gap:10px;
+  padding:11px;
+  background:var(--paper);
+  border:1px solid var(--line);
+  border-radius:10px;
+}
+.checkbox input{
+  width:22px;
+  height:22px;
+  flex:0 0 auto;
+  margin-top:3px;
+  accent-color:var(--orange);
+}
+.checkbox.checked span{
+  color:var(--muted);
+  text-decoration:line-through;
+}
+#status,#copy-status{min-height:1.5em}
+.print-only{display:none}
+footer{
+  padding:30px 0;
+  color:#e8f0e7;
+  background:var(--dark);
+  font-size:.95rem;
+}
+@media(max-width:730px){
+  .top{align-items:flex-start;flex-direction:column}
+  .hero,.grid2,.grid3{grid-template-columns:1fr}
+  .day{grid-template-columns:1fr;gap:4px}
+  .heading{display:block}
+  .buttons,.toolbar{display:grid;grid-template-columns:1fr}
+  .btn,button{width:100%}
+  .checklist{grid-template-columns:1fr}
+}
+@media print{
+  body{color:#000;background:#fff;font-size:12pt}
+  header{padding:0;color:#000;background:#fff}
+  .top,nav,.art,.buttons,.toolbar,footer{display:none!important}
+  .hero{display:block}
+  h1{margin-top:0;color:var(--green);font-size:30pt}
+  main{padding:10px 0}
+  .card,.check-summary,.notice{box-shadow:none;break-inside:avoid}
+  .print-only{display:inline}
+  .check-summary{color:#000;background:#fff;border:1px solid #999}
+  .track{display:none}
+}
+</style>
+</head>
+
+<body>
+<header>
+<div class="wrap">
+<div class="top">
+<div class="brand">FAMILY TRAVEL NOTE · 2026.12.28 확인</div>
+<nav aria-label="주요 메뉴">
+<a href="#schedule">일정</a>
+<a href="#meals">식사</a>
+<a href="#tips">조언</a>
+<a href="#packing">준비물</a>
+</nav>
+</div>
+
+<div class="hero">
+<div>
+<h1>오사카<br>가족여행</h1>
+<p>
+2026년 12월 28일부터 2027년 1월 1일까지,
+긴테쓰 닛폰바시역 주변에 머무는 성인 2명과 6세 아이의 가족여행입니다.
+</p>
+</div>
+
+<div class="art" aria-label="실제 사진이 아닌 창작 오사카 일러스트">
+<svg viewBox="0 0 500 300" role="img">
+<title>오사카성과 가족을 표현한 창작 그림</title>
+<circle cx="390" cy="65" r="35" fill="#ffd58e"/>
+<path d="M0 220Q100 170 220 220T500 200V300H0Z" fill="#286447"/>
+<path d="M230 105h100v115H230z" fill="#fff0c9"/>
+<path d="M215 105h130l-25-24h-80z" fill="#e47732"/>
+<path d="M245 81h70l-15-20h-40z" fill="#fff0c9"/>
+<path d="M260 61h40l-12-17h-16z" fill="#e47732"/>
+<path d="M255 130h50v32h-50z" fill="#174b36"/>
+<circle cx="105" cy="235" r="13" fill="#e47732"/>
+<path d="M105 248v40m0-26-18 16m18-16 18 16" stroke="#174b36" stroke-width="7" stroke-linecap="round"/>
+<circle cx="150" cy="239" r="11" fill="#f2b36c"/>
+<path d="M150 250v38m0-25-16 14m16-14 17 14" stroke="#174b36" stroke-width="7" stroke-linecap="round"/>
+</svg>
+</div>
+</div>
+</div>
+</header>
+
+<main class="wrap">
+
+<div class="notice">
+<strong>확정 여행 정보</strong><br>
+2026년 12월 28일 10:00 청주국제공항 출발 · 항공사 에어로케이 ·
+11:30 간사이국제공항 도착<br>
+숙소: 긴테쓰 닛폰바시역 주변 · 가족 구성: 성인 2명과 6세 자녀<br>
+일정은 가족의 이동 부담을 줄이고 휴식 시간을 포함해 구성했습니다.
+</div>
+
+<section class="section" aria-labelledby="summary-title">
+<div class="heading">
+<h2 id="summary-title">여행 요약</h2>
+<span class="muted">가족이 바로 사용할 수 있는 일정입니다.</span>
+</div>
+
+<div class="grid3">
+<div class="card summary-card"><strong>출발</strong>12월 28일 10:00 청주공항</div>
+<div class="card summary-card"><strong>항공사</strong>에어로케이</div>
+<div class="card summary-card"><strong>도착</strong>12월 28일 11:30 간사이공항</div>
+<div class="card summary-card"><strong>숙소</strong>긴테쓰 닛폰바시역 주변</div>
+<div class="card summary-card"><strong>기간</strong>4박 5일</div>
+<div class="card summary-card"><strong>가족</strong>성인 2명 · 6세 아이</div>
+</div>
+</section>
+
+<section class="section" id="schedule" aria-labelledby="schedule-title">
+<div class="heading">
+<h2 id="schedule-title">가족 맞춤 일정</h2>
+<span class="muted">아이의 체력에 따라 선택 일정은 줄여도 됩니다.</span>
+</div>
+
+<article class="day">
+<div class="daylabel">12월 28일<br>1일차</div>
+<div>
+<h3>청주공항 → 간사이공항 → 난바 → 숙소</h3>
+<ol>
+<li>10:00 청주국제공항 출발</li>
+<li>11:30 간사이국제공항 도착</li>
+<li>입국심사와 수하물 수령</li>
+<li>공항에서 이용 가능한 라피트 탑승</li>
+<li>난카이 난바역 도착 후 점심</li>
+<li>긴테쓰 닛폰바시역 주변 숙소 이동</li>
+<li>15:00 숙소 체크인</li>
+<li>구로몬시장 짧은 구경 또는 숙소 휴식</li>
+<li>숙소 주변에서 이른 저녁</li>
+</ol>
+<span class="tag">첫날은 여유롭게</span>
+<span class="tag">라피트는 도착 후 이용</span>
+<div class="buttons">
+<a class="btn orange" href="https://www.google.com/maps/search/?api=1&amp;query=%EA%B5%AC%EB%A1%9C%EB%AA%AC%EC%8B%9C%EC%9E%A5">구로몬시장 지도</a>
+<a class="btn green" href="https://www.google.com/maps/search/?api=1&amp;query=%EA%B8%B4%ED%85%8C%EC%93%B0%20%EB%8B%9B%ED%8F%B0%EB%B0%94%EC%8B%9C%EC%97%AD">숙소 주변 지도</a>
+</div>
+</div>
+</article>
+
+<article class="day">
+<div class="daylabel">12월 29일<br>2일차</div>
+<div>
+<h3>교토 1일 버스투어 → 휴식 → 도톤보리</h3>
+<p>교토 투어 후 숙소에서 쉬고, 아이가 괜찮을 때만 도톤보리를 방문합니다.</p>
+<ol>
+<li>아침 식사 후 교토 버스투어</li>
+<li>투어 중 간식과 화장실 시간 확보</li>
+<li>투어 종료 후 숙소에서 휴식</li>
+<li>도톤보리 글리코 간판 주변 산책</li>
+<li>도톤보리에서 저녁 식사</li>
+</ol>
+<span class="tag">쇼핑은 짧게</span>
+<span class="tag">방한복 준비</span>
+<div class="buttons">
+<a class="btn orange" href="https://www.google.com/maps/search/?api=1&amp;query=%EB%8F%84%ED%86%A4%EB%B3%B4%EB%A6%AC">도톤보리 지도</a>
+<a class="btn green" href="https://www.google.com/maps/dir/?api=1&amp;destination=%EB%8F%84%ED%86%A4%EB%B3%B4%EB%A6%AC">도톤보리 길찾기</a>
+</div>
+</div>
+</article>
+
+<article class="day">
+<div class="daylabel">12월 30일<br>3일차</div>
+<div>
+<h3>가이유칸 → 덴포잔 → 오사카성 → 야간 크루즈</h3>
+<p>실내 관람과 휴식을 먼저 배치하고, 고자부네는 아이의 상태에 따라 이용합니다.</p>
+<ol>
+<li>오전 가이유칸 관람</li>
+<li>덴포잔 마켓플레이스 점심</li>
+<li>휴식과 간식</li>
+<li>오사카성 공원 및 천수각 외관 구경</li>
+<li>가능하면 고자부네 뱃놀이</li>
+<li>크루즈 전 이른 저녁</li>
+<li>오사카 트와일라이트 야간 크루즈</li>
+<li>숙소 귀환</li>
+</ol>
+<span class="tag">고자부네 선택</span>
+<span class="tag">야간 크루즈 중심</span>
+<div class="buttons">
+<a class="btn orange" href="https://www.google.com/maps/search/?api=1&amp;query=%EC%98%A4%EC%82%AC%EC%B9%B4%20%EA%B0%80%EC%9D%B4%EC%9C%A0%EC%B9%B8">가이유칸 지도</a>
+<a class="btn green" href="https://www.google.com/maps/dir/?api=1&amp;destination=%EC%98%A4%EC%82%AC%EC%B9%B4%20%EA%B0%80%EC%9D%B4%EC%9C%A0%EC%B9%B8">가이유칸 길찾기</a>
+<a class="btn orange" href="https://www.google.com/maps/search/?api=1&amp;query=%EC%98%A4%EC%사%EC%B9%B4%EC%84%B1%20%EA%B3%B5%EC%9B%90">오사카성 지도</a>
+<a class="btn green" href="https://www.google.com/maps/dir/?api=1&amp;destination=%EC%98%A4%EC%82%AC%EC%B9%B4%EC%84%B1%20%EA%B3%B5%EC%9B%90">오사카성 길찾기</a>
+<a class="btn orange" href="https://www.google.com/maps/search/?api=1&amp;query=%EC%98%A4%EC%82%AC%EC%B9%B4%20%EC%95%BC%EA%B0%84%20%ED%81%AC%EB%A3%A8%EC%A6%88">야간 크루즈 검색</a>
+</div>
+</div>
+</article>
+
+<article class="day">
+<div class="daylabel">12월 31일<br>4일차</div>
+<div>
+<h3>신세카이 → 쓰텐카쿠 → 동물원 또는 하루카스 → 원더크루즈</h3>
+<p>동물원과 하루카스는 아이의 체력에 따라 하나를 줄여도 충분합니다.</p>
+<ol>
+<li>신세카이 산책과 쓰텐카쿠</li>
+<li>신세카이 점심</li>
+<li>텐노지 동물원 짧게 관람</li>
+<li>아이 컨디션이 좋으면 하루카스 300</li>
+<li>예약한 시간에 도톤보리 원더크루즈</li>
+<li>숙소 주변 저녁 식사</li>
+</ol>
+<span class="tag">동물원·하루카스 선택</span>
+<span class="tag">원더크루즈 우선</span>
+<div class="buttons">
+<a class="btn orange" href="https://www.google.com/maps/search/?api=1&amp;query=%EC%93%B0%ED%85%90%EC%B9%B4%EC%BF%A0">쓰텐카쿠 지도</a>
+<a class="btn green" href="https://www.google.com/maps/dir/?api=1&amp;destination=%EC%93%B0%ED%85%90%EC%B9%B4%EC%BF%A0">쓰텐카쿠 길찾기</a>
+<a class="btn orange" href="https://www.google.com/maps/search/?api=1&amp;query=%ED%85%90%EB%85%B8%EC%A7%80%20%EB%8F%99%EB%AC%BC%EC%9B%90">동물원 지도</a>
+<a class="btn orange" href="https://www.google.com/maps/search/?api=1&amp;query=%ED%95%98%EB%A3%A8%EC%B9%B4%EC%8A%A4%20300">하루카스 300 지도</a>
+<a class="btn orange" href="https://www.google.com/maps/search/?api=1&amp;query=%EB%8F%84%ED%86%A4%EB%B3%B4%EB%A6%AC%20%EC%9B%90%EB%8D%94%20%ED%81%AC%EB%A3%A8%EC%A6%88">원더크루즈 검색</a>
+</div>
+</div>
+</article>
+
+<article class="day">
+<div class="daylabel">1월 1일<br>5일차</div>
+<div>
+<h3>체크아웃 → 난바 짐 보관 → 자유시간 → 공항</h3>
+<ol>
+<li>10:00 숙소 체크아웃</li>
+<li>난바역 코인락커 또는 수하물 보관소 이용</li>
+<li>난바 파크스·난바 시티에서 점심과 휴식</li>
+<li>아이 컨디션이 좋으면 도톤보리 산책</li>
+<li>14:00 라피트 탑승</li>
+<li>간사이공항 이동</li>
+<li>18:00 출국</li>
+</ol>
+<span class="tag">짐은 체크아웃 직후 보관</span>
+<span class="tag">멀리 이동하지 않기</span>
+<div class="buttons">
+<a class="btn orange" href="https://www.google.com/maps/search/?api=1&amp;query=%EB%82%9C%EB%B0%94%20%ED%8C%8C%ED%81%AC%EC%8A%A4">난바 파크스 지도</a>
+<a class="btn orange" href="https://www.google.com/maps/search/?api=1&amp;query=%EB%82%9C%EC%B9%B4%EC%9D%B4%20%EB%82%9C%EB%B0%94%EC%97%AD">난카이 난바역 지도</a>
+<a class="btn green" href="https://www.google.com/maps/dir/?api=1&amp;destination=%EA%B0%84%EC%82%AC%EC%9D%B4%EA%B3%B5%ED%95%AD">간사이공항 길찾기</a>
+</div>
+</div>
+</article>
+</section>
+
+<section class="section" id="meals" aria-labelledby="meals-title">
+<div class="heading">
+<h2 id="meals-title">가족 식사 계획</h2>
+<span class="muted">아이들이 먹기 쉬운 메뉴를 중심으로 구성했습니다.</span>
+</div>
+
+<div class="grid2">
+<div class="card"><h3>12월 28일</h3><p>구로몬시장 또는 난바 주변에서 우동·라멘·덮밥·카레를 먹습니다.</p></div>
+<div class="card"><h3>12월 29일</h3><p>교토 투어 후 숙소 주변에서 저녁을 먹고, 도톤보리에서는 간식과 짧은 산책을 합니다.</p></div>
+<div class="card"><h3>12월 30일</h3><p>덴포잔 마켓플레이스에서 점심을 먹고, 크루즈 전에는 간단한 저녁을 선택합니다.</p></div>
+<div class="card"><h3>12월 31일</h3><p>신세카이에서 쿠시카츠·돈카츠·우동 중 아이가 먹기 쉬운 메뉴를 고릅니다.</p></div>
+<div class="card"><h3>1월 1일</h3><p>난바 파크스 또는 난바 시티에서 점심을 먹고 공항 이동 전 간식을 준비합니다.</p></div>
+<div class="card"><h3>식사 원칙</h3><p>긴 대기시간보다 아이의 식사시간과 휴식을 우선하고, 식당은 현장 상황에 맞춰 선택합니다.</p></div>
+</div>
+</section>
+
+<section class="section" id="tips" aria-labelledby="tips-title">
+<div class="heading">
+<h2 id="tips-title">가족여행 조언</h2>
+</div>
+
+<div class="grid2">
+<div class="card">
+<h3>주유패스 일정</h3>
+<ul>
+<li>가이유칸 이용권은 별도로 준비합니다.</li>
+<li>고자부네는 아이가 피곤하면 생략합니다.</li>
+<li>동물원과 하루카스는 하나만 선택해도 충분합니다.</li>
+<li>원더크루즈는 예약 시간을 중심으로 움직입니다.</li>
+</ul>
+</div>
+
+<div class="card">
+<h3>짐 보관</h3>
+<p>
+1월 1일 체크아웃 직후 난바역 대형 코인락커 또는 수하물 보관소에 짐을 맡깁니다.
+짐을 맡긴 뒤에는 난바 파크스·난바 시티처럼 이동이 편한 실내 공간을 이용합니다.
+</p>
+</div>
+
+<div class="card">
+<h3>아이 준비물</h3>
+<p>
+따뜻한 겉옷, 장갑, 간식, 물, 물티슈, 여벌 양말을 준비합니다.
+야간 크루즈에서는 바람이 강할 수 있으므로 겉옷을 반드시 챙깁니다.
+</p>
+</div>
+
+<div class="card">
+<h3>일정 조절</h3>
+<p>
+아이가 졸리거나 피곤해하면 다음 장소를 생략하고 숙소로 돌아갑니다.
+가족여행에서는 계획을 모두 수행하는 것보다 편안하게 마무리하는 것이 우선입니다.
+</p>
+</div>
+</div>
+</section>
+
+<section class="section" id="packing" aria-labelledby="packing-title">
+<div class="heading">
+<h2 id="packing-title">준비물 체크</h2>
+<span class="muted">체크 상태는 현재 브라우저에 저장됩니다.</span>
+</div>
+
+<div class="check-summary" aria-live="polite">
+<strong id="count">0/8 · 0%</strong>
+<span class="print-only"> · 인쇄 시 현재 상태가 표시됩니다.</span>
+<div class="track"><div class="bar" id="bar"></div></div>
+<div id="status">저장 상태를 확인하는 중입니다.</div>
+</div>
+
+<div class="checklist">
+<label class="checkbox"><input data-id="p01" type="checkbox"><span>p01 개인 편한 신발</span></label>
+<label class="checkbox"><input data-id="p02" type="checkbox"><span>p02 개인 겉옷</span></label>
+<label class="checkbox"><input data-id="p03" type="checkbox"><span>p03 공통 충전기</span></label>
+<label class="checkbox"><input data-id="p04" type="checkbox"><span>p04 공통 보조배터리</span></label>
+<label class="checkbox"><input data-id="p05" type="checkbox"><span>p05 개인 물병</span></label>
+<label class="checkbox"><input data-id="p06" type="checkbox"><span>p06 활동 접이식 우산</span></label>
+<label class="checkbox"><input data-id="p07" type="checkbox"><span>p07 공통 휴지·물티슈</span></label>
+<label class="checkbox"><input data-id="p08" type="checkbox"><span>p08 개인 세면도구</span></label>
+</div>
+
+<div class="toolbar">
+<button class="white" id="reset" type="button">체크 초기화</button>
+<button class="green" id="print" type="button">인쇄 / PDF 저장</button>
+</div>
+</section>
+
+<section class="section" aria-labelledby="share-title">
+<div class="heading"><h2 id="share-title">공유</h2></div>
+<div class="card">
+<p>
+GitHub Pages에 게시한 HTTPS 주소를 가족에게 공유하세요.
+공개 주소에는 개인정보·전화번호·예약번호·실명을 넣지 마세요.
+</p>
+<button class="orange" id="share" type="button">현재 페이지 링크 복사</button>
+<div id="copy-status" aria-live="polite"></div>
+<input id="fallback" readonly aria-label="복사할 페이지 주소" style="position:absolute;left:-9999px">
+</div>
+</section>
+
+</main>
+
+<footer>
+<div class="wrap">
+오사카 가족여행 · 2026.12.28–2027.01.01<br>
+자료 확인일: 2026.11.13 · 실시간 자동 갱신 정보가 아닙니다.
+</div>
+</footer>
+
+<script>
+(function(){
+"use strict";
+
+var storageKey="family-travel:osaka-20261228-20270101:packing";
+var boxes=[].slice.call(document.querySelectorAll("input[data-id]"));
+var count=document.getElementById("count");
+var bar=document.getElementById("bar");
+var status=document.getElementById("status");
+
+function update(){
+  var total=boxes.length;
+  var checked=boxes.filter(function(box){
+    return box.checked;
+  }).length;
+  var percent=total ? Math.round(checked/total*100) : 0;
+
+  count.textContent=checked+"/"+total+" · "+percent+"%";
+  bar.style.width=percent+"%";
+
+  boxes.forEach(function(box){
+    var item=box.closest(".checkbox");
+    item.classList.toggle("checked",box.checked);
+
+    var label=item.querySelector("span");
+    var state=label.querySelector(".print-state");
+
+    if(!state){
+      state=document.createElement("span");
+      state.className="print-only print-state";
+      label.appendChild(document.createTextNode(" "));
+      label.appendChild(state);
+    }
+
+    state.textContent=box.checked ? "[준비 완료]" : "[미준비]";
+  });
+}
+
+function save(){
+  try{
+    var data={};
+
+    boxes.forEach(function(box){
+      data[box.dataset.id]=box.checked === true;
+    });
+
+    localStorage.setItem(storageKey,JSON.stringify(data));
+    status.textContent="체크 상태를 이 브라우저에 저장했습니다.";
+  }catch(error){
+    status.textContent="저장에 실패했지만 체크와 인쇄는 계속 사용할 수 있습니다.";
+  }
+
+  update();
+}
+
+try{
+  var saved=JSON.parse(localStorage.getItem(storageKey)||"{}");
+
+  boxes.forEach(function(box){
+    box.checked=saved[box.dataset.id] === true;
+  });
+}catch(error){
+  status.textContent="저장 데이터를 읽지 못했습니다. 현재 체크는 사용할 수 있습니다.";
+}
+
+boxes.forEach(function(box){
+  box.addEventListener("change",save);
+});
+
+update();
+
+document.getElementById("reset").addEventListener("click",function(){
+  if(!window.confirm("이 여행의 체크 상태를 초기화할까요?")){
+    return;
+  }
+
+  boxes.forEach(function(box){
+    box.checked=false;
+  });
+
+  try{
+    localStorage.removeItem(storageKey);
+    status.textContent="체크 상태를 초기화했습니다.";
+  }catch(error){
+    status.textContent="화면은 초기화했지만 저장소를 변경하지 못했습니다.";
+  }
+
+  update();
+});
+
+document.getElementById("print").addEventListener("click",function(){
+  window.print();
+});
+
+var share=document.getElementById("share");
+var copyStatus=document.getElementById("copy-status");
+var fallback=document.getElementById("fallback");
+
+share.addEventListener("click",function(){
+  var url=window.location.href;
+
+  if(window.location.protocol==="file:"){
+    copyStatus.textContent="GitHub Pages 게시 후 HTTPS 주소를 공유하세요.";
+    return;
+  }
+
+  if(window.isSecureContext && navigator.clipboard){
+    navigator.clipboard.writeText(url)
+      .then(function(){
+        copyStatus.textContent="현재 페이지 주소를 복사했습니다.";
+      })
+      .catch(function(){
+        manualCopy(url);
+      });
+  }else{
+    manualCopy(url);
+  }
+});
+
+function manualCopy(url){
+  fallback.value=url;
+  fallback.style.position="static";
+  fallback.style.width="100%";
+  fallback.style.marginTop="8px";
+  fallback.focus();
+  fallback.select();
+  copyStatus.textContent="주소를 선택했습니다. Ctrl+C로 복사하세요.";
+}
+}());
+</script>
+</body>
+</html>
